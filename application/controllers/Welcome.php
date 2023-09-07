@@ -23,7 +23,13 @@ class Welcome extends CI_Controller
 	// Mostrar el formulario de creación de usuario
 	public function crear()
 	{
-		$this->load->view('usuarios/crear');
+		$name="daniel";
+		$data=[
+			"nombre"=> $name
+		];
+		$this->load->view('/templates/header');
+		 $this->load->view('usuarios/crear', $data);
+		$this->load->view('/templates/footer');
 	}
 
 	// Procesar el formulario de creación de usuario
